@@ -15,4 +15,34 @@ window.onload = function () {
         section.scrollIntoView({ behavior: "smooth" });
     }
   }
+  // top버튼 스크롤 기능=================================
+  const topbtn = document.getElementById("top-btn")
+  topbtn.addEventListener("click" , function(event){
+  event.preventDefault()
+  console.log(window.scrollY);
+  if(window.scrollY == 0){
+  window.scrollTo({
+    top:2496,
+    behavior: "smooth"
+  });
+  }
+  else{
+    window.scrollTo({
+      top:0,
+      behavior: "smooth"
+    });
+  }
+  });
+  // 화살표 방향 바꾸기===============================
+  const topBtnImg = document.getElementById("top-btn-img")
+  Window.addEventListener("scroll", function(scTop){
+    scTop = Window.documentElement.scllTop;
+    if(scTop > 0){
+      topBtnImg.classList.add("up")
+    }
+    else{
+      topBtnImg.classList.remove("up")
+    }
+
+  });
 };

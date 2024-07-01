@@ -52,6 +52,12 @@ clear: both;
 }
 /* 모달창 */
 /* top버튼 */
+.top-botton{
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    z-index: 99999;
+}
 /* 전체 레이아웃 */
 .wrap {
   position: relative;
