@@ -34,9 +34,9 @@ window.onload = function () {
   }
   });
   // 화살표 방향 바꾸기===============================
-  const topBtnImg = document.getElementById("top-btn-img")
-  Window.addEventListener("scroll", function(scTop){
-    scTop = Window.documentElement.scllTop;
+  const topBtnImg = document.getelementById("top-btn-img")
+  window.addEventListener("scroll", function(scTop){
+    scTop = window.documentelement.scllTop;
     if(scTop > 0){
       topBtnImg.classList.add("up")
     }
