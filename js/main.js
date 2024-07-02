@@ -34,7 +34,9 @@ window.onload = function () {
   }
   });
   // 화살표 방향 바꾸기===============================
-  const topBtnImg = document.getelementById("top-btn-img")
+  // const topBtnImg = document.getelementById("top-btn-img")
+  const topBtnImg = document.getElementById("top-btn-img")
+  
   window.addEventListener("scroll", function(scTop){
     scTop = window.documentelement.scllTop;
     if(scTop > 0){
@@ -45,4 +47,29 @@ window.onload = function () {
     }
 
   });
+
+  // 모달창=======================================
+  const body = document.querySelector("body")
+  const modal = document.querySelector(".modal-wrap")
+  const modalClose = document.querySelector(".modal-close")
+  // isOpen 값에 따라 스크롤을 제어하는 함수
+  function controlScroll(isOpen){
+  if(isOpen){
+    body.style.overflow = "hidden";
+  }
+  else{
+    body.style.overflow = "auto";
+  }
+  }
+  
+  // 초기 모달창 상태 설정
+  const isOpen = true;
+  controlScroll(isOpen)
+  modalClose.addEventListener("click" , function(){
+  modal.style.display = "none";
+  // 모달창이 닫힐 떄 스크롤을 다시 활설화
+  controlScroll(false);
+
+  })
+  
 };
