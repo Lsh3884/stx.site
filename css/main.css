@@ -51,6 +51,66 @@ body {
   clear: both;
 }
 /* 모달창 */
+.modal-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9999999;
+}
+.modal-main{
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  border-radius: 40px;
+
+}
+.modal-logo{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border: 6px solid #fff;
+  width: 130px;
+  height: 130px;
+  background: url("../images/chat-btn.png") no-repeat greenyellow center;
+}
+.modal-notice{
+  text-align: center;
+  /* line-height: 40px; */
+  font-size: 20px;
+  font-weight: 800;
+  padding: 145px 0;
+  line-height: 2;
+
+}
+.modal-notice span{
+  font-size: 16px;
+  font-weight: 300;
+}
+.modal-notice strong{
+  color: #ed1c24;
+  background-color: rgb(255, 255, 75);
+}
+.modal-close{
+  text-align: center;
+  color: #fefeff;
+  background-color: #4e4e4e;
+  width: 600px;
+  height: 50px;
+  border-radius: 0 0 40px 40px;
+  line-height: 40px;
+}
+.modal-close i{
+  font-size: 14px;
+}
 /* top버튼 */
 .top-botton{
   position: fixed;
@@ -644,3 +704,4 @@ body {
   /* address태그가 글자가 기울어지기 때문에 스타일 normal적용해서 똑바로 세움 */
   font-size: normal;
 }
+
