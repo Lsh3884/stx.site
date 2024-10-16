@@ -51,68 +51,63 @@ body {
   clear: both;
 }
 /* 모달창 */
-.modal-wrap{
+.modal-wrap {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 9999999;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
 }
-.modal-main{
-  width: 600px;
-  height: 500px;
-  background-color: #fff;
+.modal-main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
-  border-radius: 40px;
-
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 150px;
+  border-radius: 30px;
 }
-.modal-logo{
+.modal-logo {
   position: absolute;
+  display: block;
   top: -50px;
   left: 50%;
   transform: translate(-50%);
-  border-radius: 50%;
-  border: 6px solid #fff;
   width: 130px;
   height: 130px;
-  background: url("../images/chat-btn.png") no-repeat greenyellow center;
+  border-radius: 50%;
+  background: url("../images/chat-btn.png") no-repeat center #dbf4c7;
+  border: 6px solid #fff;
 }
-.modal-notice{
-  text-align: center;
-  /* line-height: 40px; */
+.modal-notice {
   font-size: 20px;
-  font-weight: 800;
-  padding: 145px 0;
+  font-weight: 500;
   line-height: 2;
-
 }
-.modal-notice span{
+.modal-notice strong {
+  color: red;
+  background: linear-gradient(to top, yellow 50%, transparent 50%);
+}
+.modal-notice span {
   font-size: 16px;
   font-weight: 300;
 }
-.modal-notice strong{
-  color: #ed1c24;
-  background-color: rgb(255, 255, 75);
-}
-.modal-close{
-  text-align: center;
-  color: #fefeff;
-  background-color: #4e4e4e;
-  width: 600px;
-  height: 50px;
-  border-radius: 0 0 40px 40px;
-  line-height: 40px;
-}
-.modal-close i{
-  font-size: 14px;
+.modal-close {
+  background-color: #d8d8d8;
+  padding: 15px;
+  border-radius: 0 0 30px 30px;
+  cursor: pointer;
 }
 /* top버튼 */
-.top-botton{
+.top-buttom {
   position: fixed;
   right: 30px;
   bottom: 60px;
@@ -122,7 +117,22 @@ body {
   align-items: center;
   gap: 10px;
 }
-.chat-btn span{
+.chat-btn {
+  animation: updown 1.5s infinite;
+}
+/* 애니메이션 효과 */
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.chat-btn span {
   position: absolute;
   top: 34px;
   left: -186px;
@@ -133,51 +143,34 @@ body {
   text-align: center;
   box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
   display: none;
-  /* transition: all 0.5s; */
 }
-.chat-btn{
-  animation: updown 1.5s infinite;
-}
-/* 에니메이션 효과 */
-@keyframes updown{
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-10%);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-.chat-btn:hover span{
+.chat-btn:hover span {
   display: block;
 }
-.shop-btn{
+.shop-btn {
   position: relative;
   display: block;
   width: 55px;
   line-height: 55px;
+  border-radius: 50%;
   background-color: #fff;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
-  border-radius: 50%;
   box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
 }
-.top-btn{
+.top-btn {
   width: 55px;
   line-height: 55px;
+  border-radius: 50%;
   background-color: #ed1c24;
   text-align: center;
-  border-radius: 50%;
   box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
-
 }
-.top-btn img{
+.top-btn img {
   transform: rotate(180deg);
 }
-.top-btn img.up{
+.top-btn img.up {
   transform: rotate(0deg);
 }
 /* 전체 레이아웃 */
@@ -371,7 +364,6 @@ body {
   font-weight: 600;
   color: #111;
   padding-bottom: 31px;
-  background-color: aqua;
 }
 .business-title::after {
   content: "";
@@ -633,7 +625,6 @@ body {
 .about-list {
   position: relative;
   display: inline-block;
-  background-color: antiquewhite;
 }
 .about-list li {
   position: relative;
@@ -704,4 +695,3 @@ body {
   /* address태그가 글자가 기울어지기 때문에 스타일 normal적용해서 똑바로 세움 */
   font-size: normal;
 }
-
